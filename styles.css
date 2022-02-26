@@ -36,3 +36,12 @@ h1 {
   font-size: 8rem;
   text-align: center;
 }
+
+/* Main styles */
+
+p {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  padding: 1rem;
+}

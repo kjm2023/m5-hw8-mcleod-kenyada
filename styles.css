@@ -26,15 +26,19 @@ header {
   width: 100%;
   height: 300px;
   background-color:var(--primary-color);
+  display: flex;
+  justify-content:center;
+  align-items:center;
 }
 
 h1 {
-  width: 30%;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
   color: var(--white);
-  font-size: 6rem;
+  font-size: 4.5rem;
   text-align: center;
+  letter-spacing: .3rem;
+  line-height: .9em;
+  padding: 0 5%;
 }
 
 /* Main styles */
@@ -42,19 +46,19 @@ h1 {
 p {
   text-align: center;
   color: var(--primary-color);
-  font-size: 2rem;
-  padding: 1rem;
-  margin: 1% auto;
+  font-size: 1.75rem;
+  padding: 2.5rem;
+  margin: 0 auto;
 }
 
 /* --Boxes */
 
 .boxes {
-  width: 70%;
-  margin: 2% auto;
+  width: 100%;
+  /*margin: 2% auto;*/
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 .box {
@@ -62,7 +66,8 @@ p {
   border-radius: 10px;
   font-size: 8rem;
   text-align: center;
-  padding: 3% 7%;
+  padding: 5% 10%;
+  margin-bottom: 5%;
   color: var(--primary-color);
   box-shadow: 10px 10px 5px rgba(0, 0, 0, .25);
 }

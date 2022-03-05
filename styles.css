@@ -83,3 +83,25 @@ p {
 #box-3{
   background-color: var(--box-color-3);
 }
+
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    width: 30%;
+  }
+
+  .boxes {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .box {
+    margin: 0 3%;
+  }
+}

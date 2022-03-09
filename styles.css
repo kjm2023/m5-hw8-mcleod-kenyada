@@ -117,3 +117,17 @@ p {
   }
   
 }
+
+@media screen and (min-width: 1367px) {
+  h1 {
+    width: 20%;
+  }
+
+  .boxes {
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+}

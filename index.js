@@ -1,8 +1,14 @@
 // Create an Array of at least 3 losing messages
+let messages = ["You Won!", "Wrong Box...", "Try Again"];
 
 // Create variables to count wins and losses
+let numberOfWins = 0;
+let numberOfLosses = 0;
 
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'
+let message = document.getElementById("message");
+let wins = document.getElementById("wins");
+let losses = document.getElementById("losses");
 
 // target all .box elements and attach a click event listener to each one using a loop
 

@@ -43,7 +43,9 @@ h1 {
 
 /* Main styles */
 
-p {
+p,
+#wins,
+#losses {
   text-align: center;
   color: var(--primary-color);
   font-size: 1.75rem;
@@ -51,11 +53,16 @@ p {
   margin: 0 auto;
 }
 
+#wins,
+#losses {
+  padding: .5rem;
+  margin: 0;
+}
+
 /* --Boxes */
 
 .boxes {
   width: 100%;
-  /*margin: 2% auto;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,24 +79,31 @@ p {
   box-shadow: 10px 10px 5px rgba(0, 0, 0, .25);
 }
 
-#box-1{
+#box1{
   background-color: var(--box-color-1);
 }
 
-#box-2{
+#box2{
   background-color: var(--box-color-2);
 }
 
-#box-3{
+#box3{
   background-color: var(--box-color-3);
 }
 
+.score {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*#wins,
+#losses {
+  padding: 5%;
+} */
+
 
 /* Media Queries */
-
-@media screen and (max-width: 768px) {
-
-}
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   h1 {
@@ -103,6 +117,10 @@ p {
 
   .box {
     margin: 0 3%;
+  }
+
+  .score {
+    margin-top: 5%;
   }
 }
 

@@ -12,6 +12,35 @@ let losses = document.getElementById("losses");
 
 // target all .box elements and attach a click event listener to each one using a loop
 
+let boxes = document.querySelectorAll(".box"); //array that holds the box entries
+
+
+for(let i=0; i < boxes.length; i++){
+
+    boxes[i].addEventListener('click', () => {
+        let boxNumText = event.target.textContent;
+        let boxNum = parseInt(boxNumText);
+        let randomNum = Math.floor(Math.random() *3) + 1;
+
+        switch (boxNum){
+            case randomNum:
+                message.innerHTML = messages[0];
+                numberOfWins++;
+                wins.innerHTML = "WINS: " + numberOfWins;
+                break;
+    
+            default:
+                message.innerHTML = messages[1]; 
+                numberOfLosses++;
+                losses.innerHTML = "LOSSES: " + numberOfLosses;
+    
+        }
+        
+    });
+
+} 
+
+
 // within each click event...
 // determine which box was clicked with 'this.textContent' or event.target.textContent
 // convert that value to a Number and store it to a variable
@@ -19,7 +48,11 @@ let losses = document.getElementById("losses");
 // create a random number between 1-3 and store it to a variable
 // This number will represent the winning box
 
+//let randomNum = Math.floor(Math.random() *3) + 1;
+
 // determine if the box clicked is equal to the random number
+
+
 // if the numbers match, display a winning message by changing the text content of the div#message element
 // if the numbers match, increment wins and display the win count in div#wins
 

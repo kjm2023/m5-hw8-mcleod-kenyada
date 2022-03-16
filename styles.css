@@ -69,6 +69,7 @@ p,
 }
 
 .box {
+  position: relative;
   border: 15px solid var(--primary-color);
   border-radius: 10px;
   font-size: 8rem;
@@ -77,6 +78,17 @@ p,
   margin-bottom: 5%;
   color: var(--primary-color);
   box-shadow: 10px 10px 5px rgba(0, 0, 0, .25);
+}
+
+.box:hover {
+  animation-name: boxrise;
+  animation-duration: .5s;
+}
+
+.box:active {
+  animation-name: boxsnap;
+  animation-duration: 1s;
+  animation-iteration-count: 5;
 }
 
 #box1{
@@ -97,10 +109,28 @@ p,
   justify-content: center;
 }
 
-/*#wins,
-#losses {
-  padding: 5%;
-} */
+/* Animations */
+
+/* On hover, box will rise up */
+@keyframes boxrise {
+  from { 
+    top:0;
+  }
+  to { 
+    top: -20px;
+  }
+}
+
+/* On click, box will transform to right and snap back. */
+
+@keyframes boxsnap {
+  from {
+    transform:rotate(0);
+  }
+  to {
+    transform:rotate(45deg);
+  }
+}
 
 
 /* Media Queries */
